@@ -1,0 +1,14 @@
+# Archivos de datos generados por la aplicación (no deben estar en Git)
+historias_peluditos.csv
+comentarios_articulos_perros.csv
+comentarios_articulos_gatos.csv
+
+# Archivos PDF (los ignoramos para no versionarlos en Git)
+guia_alimentacion_perros.pdf
+entrenamiento_cachorros.pdf
+comportamiento_felino.pdf
+
+# Archivos PDF (los ignoramos para no versionarlos en Git)
+guia_alimentacion_perros.pdf
+entrenamiento_cachorros.pdf
+comportamiento_felino.pdf
