@@ -1,0 +1,18 @@
+[theme]
+# Base del tema: "dark" para que los elementos por defecto se adapten a un esquema oscuro
+base="dark"
+
+# Color principal para botones y acentos (Un dorado elegante)
+primaryColor="#BFA181" # Dorado/Bronce
+
+# Color de fondo principal (Azul Oscuro Clásico)
+backgroundColor="#0A1828" # Un azul muy oscuro, casi negro
+
+# Color de fondo secundario (Un azul ligeramente más claro para contraste sutil)
+secondaryBackgroundColor="#172A3A" # Un azul oscuro un poco menos intenso, pero aún profundo
+
+# Color del texto general (Gris muy claro para excelente contraste sobre el fondo oscuro)
+textColor="#E0E0E0" # Gris claro
+
+# Fuente
+font="sans serif"
