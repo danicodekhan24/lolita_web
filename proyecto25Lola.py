@@ -351,7 +351,7 @@ if st.session_state.seccion_activa == "manada_peluditos":
         },
         {
             "nombre": "TIGRE y Filipa",
-            "imagen": "tigre_filip.jpg",
+            "imagen": "tigrefilip.jpg",
             "cualidades": "Tigre y Filipa representan una gran manada que pronto conoceran ¡¡ Tigre es el más tranquilo y comelon ¡¡ de la manada y Filipa prefiere dominar y ser la  consentidad de sus humanos. Su curiosidad se refleja en su mirada."
         },
         {
