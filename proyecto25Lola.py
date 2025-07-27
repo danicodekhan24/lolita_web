@@ -346,7 +346,7 @@ if st.session_state.seccion_activa == "manada_peluditos":
     manada_perros = [
         {
             "nombre": "ROMA",
-            "imagen": "Romijul.jpg",
+            "imagen": "RomiJul.jpg",
             "cualidades": "ROMA es una Sabueso (Bloodhound) muy curiosa por su olfato insuperable. Su temperamento con la gente es  sereno y analitico , le encanta jugar con sus amigos y siempre está lista para un reto. Es muy leal y protectora con su manada."
         },
         {
