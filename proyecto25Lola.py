@@ -346,18 +346,18 @@ if st.session_state.seccion_activa == "manada_peluditos":
     manada_perros = [
         {
             "nombre": "ROMA",
-            "imagen": "Roma.jpg",
-            "cualidades": "ROMA es una perrita muy juguetona y cariñosa. Le encanta correr en el parque y siempre está lista para un abrazo. Es muy leal y protectora con su familia."
+            "imagen": "Romijul.jpg",
+            "cualidades": "ROMA es una Sabueso (Bloodhound) muy curiosa por su olfato insuperable. Su temperamento con la gente es  sereno y analitico , le encanta jugar con sus amigos y siempre está lista para un reto. Es muy leal y protectora con su manada."
         },
         {
-            "nombre": "TIGRE",
-            "imagen": "tigre_luky.jpeg",
-            "cualidades": "TIGRE es el más tranquilo de la manada. Disfruta de largas siestas al sol y es muy paciente con los cachorros. Su sabiduría se refleja en su mirada."
+            "nombre": "TIGRE y Filipa",
+            "imagen": "tigre_filip.jpg",
+            "cualidades": "Tigre y Filipa representan una gran manada que pronto conoceran ¡¡ Tigre es el más tranquilo y comelon ¡¡ de la manada y Filipa prefiere dominar y ser la  consentidad de sus humanos. Su curiosidad se refleja en su mirada."
         },
         {
             "nombre": "LOLA",
-            "imagen": "Lolita.jpg",
-            "cualidades": "LOLA es una aventurera nata. Siempre busca nuevas exploraciones en el jardín y es increíblemente curiosa. Su energía es contagiosa."
+            "imagen": "lolitexplorer.jpg",
+            "cualidades": "LOLA es la Beagle con el  olfato excepcionalmente más desarrollado. Siempre busca nuevas exploraciones con su manada y es increíblemente terca ¡¡ jeje. Su energía es contagiosa."
         }
     ]
 
