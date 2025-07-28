@@ -81,8 +81,8 @@ if st.sidebar.button("Inicio 🏠", key="sb_inicio"):
     st.session_state.seccion_activa = "inicio"
 if st.sidebar.button("Conoce a Lola 🐶", key="sb_conoce_lola_sb"):
     st.session_state.seccion_activa = "conoce_lola"
-if st.sidebar.button("Notipaticas🐾", key="sb_nuiestros_amigos_sb"):
-    st.session_state.seccion_activa = "nuestros_amigos"
+if st.sidebar.button("Notipaticas🐾", key="notipatitas"):
+    st.session_state.seccion_activa = "notipatitas"
 if st.sidebar.button("Conoce nuestros peluditos 🐕🐈", key="sb_manada_peluditos_sb"):
     st.session_state.seccion_activa = "manada_peluditos"
 if st.sidebar.button("Cuidado de Mascotas 🩺", key="sb_cuidado_mascotas_sb"):
@@ -127,10 +127,10 @@ with st.sidebar:
         # Puedes añadir más información aquí si lo deseas:
         # st.write("Puedes contactarme en: tu_email@ejemplo.com")
 # --- CONTENIDO PRINCIPAL ---
-st.markdown("<h1 style='text-align: center; color: #FFA500;'>🐾 Amigos de Lola 🐾</h1>", unsafe_allow_html=True) # Naranja estánda  
-# --- Añade estas dos líneas para tu logo ---
+st.markdown("<h1 style='text-align: center; color: #FFA500;'>  Amigos de Lola🐾</h1>", unsafe_allow_html=True) # Naranja estánda  
+# --- Añade estas dos líneas para tu logo --- 
 # --- INICIO DEL CÓDIGO MODIFICADO PARA EL LOGO ---
-logo_path = "Lolit.jpg" # Asegúrate de que esta ruta sea correcta para tu logo
+logo_path = "herodes.jpg" # Asegúrate de que esta ruta sea correcta para tu logo
 
 # Creamos 3 columnas: una vacía a la izquierda, una para el logo, una vacía a la derecha
 # Ajusta los números [1, 1, 1] si quieres más espacio a los lados, por ejemplo [2, 1, 2]
@@ -139,7 +139,7 @@ col1, col2, col3 = st.columns([2, 1, 2])
 with col2: # Colocamos el logo en la columna central
     st.image(logo_path, width=125) # Reducimos el 'width' al 50% de 250, que es 125.
 # --- FIN DEL CÓDIGO MODIFICADO PARA EL LOGO ---
-st.markdown("<h2 style='text-align: center; color: #F9B872;'>Un lugar para crear conciencia en el cuidado de nuestros peluditos</h2>", unsafe_allow_html=True) # Naranja muy pálido
+st.markdown("<h2 style='text-align: center; color: #F9B872;'>Creando conciencia en el cuidado de nuestros peluditos</h2>", unsafe_allow_html=True) # Naranja muy pálido
 
 
 st.markdown("<h3 style='text-align: center; color: #FAF5E9;'>Descubre consejos, historias y mucho más sobre perros y gatos.</h3>", unsafe_allow_html=True) # Marfil
@@ -161,9 +161,8 @@ if "seccion_activa" not in st.session_state:
     st.session_state.seccion_activa = "inicio" # Puedes elegir qué sección se muestra al inicio
 
 
-
 # Botones de navegación al inicio
-col_nav1, col_nav2, col_nav3, col_nav4, col_nav5 = st.columns(5) # Ahora 5 columnas
+col_nav1, col_nav2, col_nav3, col_nav4 = st.columns(4) # Vuelve a 4 columnas
 
 with col_nav1:
     if st.button("🐶 Conoce a Lola", use_container_width=True):
@@ -175,11 +174,8 @@ with col_nav3:
     if st.button("📖 Artículos Interesantes", use_container_width=True):
         st.session_state.seccion_activa = "articulos"
 with col_nav4:
-    if st.button("💌 Historias ", use_container_width=True):
-        st.session_state.seccion_activa = "comparte_historia" # Irá a la sección de compartir historia
-with col_nav5: # NUEVO BOTÓN
-    if st.button("🌟 Eventos Destacados", use_container_width=True):
-        st.session_state.seccion_activa = "eventos_destacados" # Nueva clave de sesión
+    if st.button("💌 Historias y Contacto", use_container_width=True):
+        st.session_state.seccion_activa = "comparte_historia"
 
 st.markdown("---")
 
@@ -287,55 +283,61 @@ if st.session_state.seccion_activa == "conoce_lola":
                          use_container_width=True)
             st.write("Es nuestra Beagle, y la inspiración de este sitio. Con su actitud siempre empoderada se ha ganado el apodo de alias la jefa. Es una Beagle amigable, curiosa y muy sociable, ideales para su liderasgo. Requiere bastante ejercicio y estimulación mental para evitar que se enoje. jeje¡¡. Su ladrido característico y aullido son notables.")
 
-if st.session_state.seccion_activa == "nuestros_amigos":
-    # --- Sección de Imagen (Mural de Encabezado) ---
-    # --- NUEVA SECCIÓN: NOTIPATITAS (Publicaciones de Noticias/Eventos) ---
+# ... (código anterior, por ejemplo, el de "conoce_lola") ...
+
+elif st.session_state.seccion_activa == "notipatitas":
+    # ¡IMPORTANTE!: Todo este bloque debe estar indentado con 4 espacios (o 1 tab) desde el 'elif'
     st.markdown("<h2 style='text-align: center; color: #F9B872;'>📰 NotiPatitas: ¡Lo Último de Nuestra Manada! 🐾</h2>", unsafe_allow_html=True)
 
-# Iterar sobre los datos de NotiPatitas para mostrar cada publicación
-for post in noti_patitas_data:
-    with st.expander(f"✨ {post['titulo']}"): # Título de la publicación en el expander
-        # Centrar la imagen dentro del expander
-        col_img_np1, col_img_np2, col_img_np3 = st.columns([1, 4, 1]) # Ajusta si necesitas más espacio
-        with col_img_np2:
-            try:
-                # Cargar imagen usando PIL.Image.open si necesitas más control o si es JPG
-                # Si es PNG y siempre el mismo nombre, st.image(post['imagen']) también sirve
-                st.image(post['imagen'], caption=post['titulo'], use_container_width=True)
-            except FileNotFoundError:
-                st.error(f"Error: La imagen '{post['imagen']}' para '{post['titulo']}' no se encontró.")
-                st.image("https://placehold.co/600x400/99775C/EAE7DD?text=Imagen+No+Encontrada",
-                                 caption="Imagen no encontrada",
-                                 use_container_width=True)
-            except Exception as e:
-                st.error(f"Error al cargar la imagen para '{post['titulo']}': {e}")
+    # Este 'for' también debe estar indentado al mismo nivel que el 'st.markdown' de arriba
+    for post in noti_patitas_data:
+        with st.expander(f"✨ {post['titulo']}"): # Este 'with' y su contenido deben estar 4 espacios (o 1 tab) más adentro
+            # Centrar la imagen dentro del expander
+            col_img_np1, col_img_np2, col_img_np3 = st.columns([1, 4, 1])
+            with col_img_np2:
+                try:
+                    st.image(post['imagen'], caption=post['titulo'], use_container_width=True)
+                except FileNotFoundError:
+                    st.error(f"Error: La imagen '{post['imagen']}' para '{post['titulo']}' no se encontró.")
+                    st.image("https://placehold.co/600x400/99775C/EAE7DD?text=Imagen+No+Encontrada",
+                             caption="Imagen no encontrada",
+                             use_container_width=True)
+                except Exception as e:
+                    st.error(f"Error al cargar la imagen para '{post['titulo']}': {e}")
 
-        st.markdown(post['descripcion'])
-        st.write("---") # Separador visual
+            st.markdown(post['descripcion'])
+            st.write("---") # Separador visual
 
-        st.markdown(f"#### Comentarios sobre '{post['titulo']}'")
-        comments_df = load_notipatitas_comments_from_csv(post_id=post['id'])
-        if not comments_df.empty:
-            # Mostrar los comentarios, puedes ajustar el formato
-            for index, row in comments_df.iterrows():
-                st.markdown(f"**{row['Nombre']}** ({row['Fecha']}): {row['Comentario']}")
-        else:
-            st.info("Sé el primero en comentar esta publicación.")
+            st.markdown(f"#### Comentarios sobre '{post['titulo']}'")
+            comments_df = load_notipatitas_comments_from_csv(post_id=post['id'])
+            if not comments_df.empty:
+                # Mostrar los comentarios, puedes ajustar el formato
+                for index, row in comments_df.iterrows():
+                    st.markdown(f"**{row['Nombre']}** ({row['Fecha']}): {row['Comentario']}")
+            else:
+                st.info("Sé el primero en comentar esta publicación.")
 
-        # Formulario para agregar un comentario
-        with st.form(key=f"comment_form_{post['id']}"): # Key único para cada formulario de comentario
-            comment_name = st.text_input("Tu Nombre", key=f"comment_name_{post['id']}")
-            comment_text = st.text_area("Tu Comentario", key=f"comment_text_{post['id']}")
-            comment_submit = st.form_submit_button("Enviar Comentario")
+            # Formulario para agregar un comentario
+            with st.form(key=f"comment_form_{post['id']}"): # Key único para cada formulario de comentario
+                comment_name = st.text_input("Tu Nombre", key=f"comment_name_{post['id']}")
+                comment_text = st.text_area("Tu Comentario", key=f"comment_text_{post['id']}")
+                comment_submit = st.form_submit_button("Enviar Comentario")
 
-            if comment_submit:
-                if comment_name and comment_text:
-                    save_notipatitas_comment_to_csv(post['id'], comment_name, comment_text)
-                    st.success("¡Gracias por tu comentario!")
-                    st.rerun() # Para recargar los comentarios
-                else:
-                    st.warning("Por favor, ingresa tu nombre y un comentario.")
-        st.write("---") # Separador al final de cada expander
+                if comment_submit:
+                    if comment_name and comment_text:
+                        save_notipatitas_comment_to_csv(post['id'], comment_name, comment_text)
+                        st.success("¡Gracias por tu comentario!")
+                        st.rerun() # Para recargar los comentarios
+                    else:
+                        st.warning("Por favor, ingresa tu nombre y un comentario.")
+            st.write("---") # Separador al final de cada expander
+
+# TODO: Asegúrate de que NADA debajo de aquí (que pertenezca a otras secciones)
+# esté indentado bajo este 'elif'. Por ejemplo, el siguiente 'elif' de 'manada_peluditos'
+# debe tener la misma indentación que el 'elif' de 'notipatitas'.
+
+
+
 
 if st.session_state.seccion_activa == "manada_peluditos":
     # --- NUEVA SECCIÓN: Cualidades de la Manada de Perros (Interactiva) ---
