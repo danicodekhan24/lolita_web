@@ -127,32 +127,12 @@ with st.sidebar:
         # Puedes añadir más información aquí si lo deseas:
         # st.write("Puedes contactarme en: tu_email@ejemplo.com")
 # --- CONTENIDO PRINCIPAL ---
-st.markdown("<h1 style='text-align: center; color: #FFA500;'>  Amigos de Lola🐾</h1>", unsafe_allow_html=True) # Naranja estánda  
-# --- Añade estas dos líneas para tu logo --- 
-# --- INICIO DEL CÓDIGO MODIFICADO PARA EL LOGO ---
-logo_path = "herodes.jpg" # Asegúrate de que esta ruta sea correcta para tu logo
-
-# Creamos 3 columnas: una vacía a la izquierda, una para el logo, una vacía a la derecha
-# Ajusta los números [1, 1, 1] si quieres más espacio a los lados, por ejemplo [2, 1, 2]
-col1, col2, col3 = st.columns([2, 1, 2])
-
-with col2: # Colocamos el logo en la columna central
-    st.image(logo_path, width=125) # Reducimos el 'width' al 50% de 250, que es 125.
-# --- FIN DEL CÓDIGO MODIFICADO PARA EL LOGO ---
+st.markdown("<h1 style='text-align: center; color: #FFA500;'>   Amigos de Lola 🐶🤍</h1>", unsafe_allow_html=True) # Naranja estánda  
 st.markdown("<h2 style='text-align: center; color: #F9B872;'>Creando conciencia en el cuidado de nuestros peluditos</h2>", unsafe_allow_html=True) # Naranja muy pálido
-
-
 st.markdown("<h3 style='text-align: center; color: #FAF5E9;'>Descubre consejos, historias y mucho más sobre perros y gatos.</h3>", unsafe_allow_html=True) # Marfil
-
-
-
-
 # --- MENSAJE DE BIENVENIDA ESTILIZADO Y BOTONES DE NAVEGACIÓN PRINCIPAL ---
 st.markdown("---")
-# Nuevo mensaje de bienvenida
-# --- MENSAJE DE BIENVENIDA ESTILIZADO Y BOTONES DE NAVEGACIÓN PRINCIPAL ---
-st.markdown("---")
-st.markdown("<h3 style='text-align: center; color: #F9B872; font-family: sans-serif;'>🐶 Bienvenidos 🐱</h3>", unsafe_allow_html=True) # Naranja medio
+st.markdown("<h3 style='text-align: center; color: #F9B872; font-family: sans-serif;'>🐾 Bienvenidos 🐱</h3>", unsafe_allow_html=True) # Naranja medio
 
 st.markdown("<h4 style='text-align: center; color: #FAF5E9;'>Explora las categorías principales:</h4>", unsafe_allow_html=True) # Marfil
 
@@ -180,6 +160,10 @@ with col_nav4:
 st.markdown("---")
 
 # ... (tus importaciones y logo_path, etc. aquí) ...
+# --- Añade estas dos líneas para tu logo --- 
+
+
+# --- FIN DEL CÓDIGO MODIFICADO PARA TRES FOTOS (CENTRAL MÁS GRANDE) ---
 
 # --- DATOS DE NOTIPATITAS ---
 # Lista para almacenar las noticias/eventos de NotiPatitas
@@ -242,7 +226,7 @@ if st.session_state.seccion_activa == "inicio":
     st.markdown("<p style='text-align: center; color: #FAE7A5; font-size: 20px;'>Selecciona una opción de arriba o desde el menú lateral para empezar a explorar.</p>", unsafe_allow_html=True)
 
     # Centramos la imagen de inicio y ajustamos el tamaño
-    imagen_inicio_path = "mural de encabezado.png" # Asegúrate de que esta ruta sea correcta
+    imagen_inicio_path = "herodes.jpg" # Asegúrate de que esta ruta sea correcta
     try:
         col_img_inicio1, col_img_inicio2, col_img_inicio3 = st.columns([1, 2, 1]) # Ajusta proporciones para centrar
         with col_img_inicio2:
