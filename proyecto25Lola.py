@@ -164,16 +164,38 @@ st.markdown("---")
 
 
 # --- FIN DEL CÓDIGO MODIFICADO PARA TRES FOTOS (CENTRAL MÁS GRANDE) ---
-
 # --- DATOS DE NOTIPATITAS ---
 # Lista para almacenar las noticias/eventos de NotiPatitas
 # Cada diccionario representa una publicación con su imagen, título y descripción.
 # Asegúrate de que las rutas de las imágenes sean correctas (por ejemplo, 'img/mural.png')
 noti_patitas_data = [
     {
-        "id": "manada_semana_1", # ID único para enlazar comentarios
+        "id": "adopcion_gatita_1", # Nuevo ID único para esta publicación
+        "titulo": "🏡 ¡Urgente Adopción! Gatita Abandonada Busca Hogar 💖",
+        "imagen": "Michi.jpg", # ¡CAMBIA ESTO! Ruta de la foto de la gatita
+        "descripcion": """
+        ¡Necesita un hogar amoroso **YA**! 😢 Esta hermosa gatita de entre **tres y cinco meses de edad**
+        fue encontrada **abandonada cerca de un conjunto residencial urbano**. Se sospecha que sus
+        antiguos dueños la dejaron allí, un triste caso de abandono que nos rompe el corazón.
+
+        Actualmente, una persona de buen corazón la está cuidando temporalmente en su apartamento.
+        Sin embargo, ella ya tiene sus propias mascotas y **no puede tenerla por mucho tiempo más**.
+
+        La gatita se encuentra en **excelente estado de salud**, es **extremadamente cariñosa**
+        y está lista para dar todo el amor que tiene. ¡Solo necesita una familia que le brinde
+        la estabilidad y el cariño que tanto merece!
+
+        Si estás buscando agrandar tu familia con una compañera felina dulce y agradecida,
+        ¡esta gatita es para ti! Por favor, contacta con [**Mili o Danilo**]
+        para más información o para coordinar una visita.
+
+        ¡Ayúdanos a encontrarle el hogar feliz que se merece!
+        """
+    },
+    {
+        "id": "manada_semana_1",
         "titulo": "🐾 La Manada de la Semana: ¡Nuestros Pequeños Héroes! 🐾",
-        "imagen": "ManadaBlue.jpg", # CAMBIA ESTO: Ruta de tu foto de la manada
+        "imagen": "ManadaBlue.jpg",
         "descripcion": """
         Esta semana, queremos presentarles a la increíble manada que ha llenado de alegría
         nuestros corazones. Son un ejemplo de amistad y resiliencia. Conoce a Blue,
@@ -182,9 +204,9 @@ noti_patitas_data = [
         """
     },
     {
-        "id": "aviso_rifa_1", # ID único
+        "id": "aviso_rifa_1",
         "titulo": "🎉 ¡Gran Rifa Solidaria por Nuestros Peluditos! 🎉",
-        "imagen": "notipatitas.png", # CAMBIA ESTO: Ruta de tu foto de la rifa
+        "imagen": "notipatitas.png",
         "descripcion": """
         ¡Participa en nuestra rifa solidaria y ayuda a los peluditos en necesidad!
         Tenemos premios increíbles. Cada boleta es un ladrillo más en la construcción
@@ -193,9 +215,9 @@ noti_patitas_data = [
         """
     },
     {
-        "id": "mascota_perdida_1", # ID único
+        "id": "mascota_perdida_1",
         "titulo": "🚨 ¡Ayúdanos a Encontrar a Luna! Perra Perdida en [Tu Ciudad/Barrio] 🚨",
-        "imagen": "Luna.jpg", # CAMBIA ESTO: Ruta de la foto de la mascota perdida
+        "imagen": "Luna.jpg",
         "descripcion": """
         Luna, una [raza/descripción], se perdió el [fecha] cerca de [lugar].
         Es muy amigable y [características distintivas]. Si la has visto o tienes
@@ -204,9 +226,9 @@ noti_patitas_data = [
         """
     },
     {
-        "id": "denuncia_maltrato_1", # ID único
+        "id": "denuncia_maltrato_1",
         "titulo": "⚖️ ¡No al Maltrato Animal! Unidos por la Justicia ⚖️",
-        "imagen": "mural de encabezado.png", # CAMBIA ESTO: Imagen que ilustre la campaña (NO fotos explícitas de maltrato)
+        "imagen": "mural de encabezado.png",
         "descripcion": """
         Recientemente, hemos recibido un reporte preocupante sobre un caso de maltrato
         animal en [ubicación general, si es relevante y seguro]. Queremos recordarles
@@ -216,6 +238,7 @@ noti_patitas_data = [
         """
     }
 ]
+
 
 # ... (el resto de tu script) ...
 
